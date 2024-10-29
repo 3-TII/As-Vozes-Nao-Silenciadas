@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Etnias Por Bioma</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="src/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="src/favicon.ico" type="image/x-icon">
+    <script type="text/javascript" src="js/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav class="gloock">
+            <ul>
+                <li><a href="#">Arte & Cultura</a></li>
+                <li><a href="#">Resistência</a></li>
+                <li><img src="src/logo.png" alt="Logo" onclick="menu()"></li>
+                <li><a href="#">Atualidades</a></li>
+                <li><a href="#">Mapa</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content-map">
+        <section class="main-map">
+            <img src="src/biomas/biomas.png" usemap="#image-map" class="map-image">
+            <map name="image-map">
+                <area target="" alt="amazonia" title="Amazônia" id="1" href="#1-etnia" onclick="displayText(1)" coords="393,269,384,256,379,276,373,319,318,315,305,294,286,317,267,287,244,288,254,334,268,340,285,320,297,328,297,329,293,340,281,356,240,358,234,320,163,292,158,255,108,278,80,276,65,263,36,252,23,225,37,182,89,170,97,118,85,106,86,95,101,94,88,84,88,71,116,76,130,66,131,82,148,90,159,85,191,68,170,35,199,44,240,21,250,39,248,74,262,83,289,74,308,75,304,64,321,62,332,69,348,67,358,70,378,33,385,45,389,68,404,77,402,95,409,103,423,108,448,115,476,128,492,142,495,156,485,161,480,174,461,189,447,194,433,193,427,222,424,250,413,235,414,235,401,254,400,254" shape="poly">
+
+                <area alt="caatinga" title="Caatinga" id="2" href="#2-etnia" onclick="displayText(2)" coords="573,154,608,184,625,184,633,198,632,222,613,243,614,263,600,264,590,291,576,298,549,314,557,324,539,336,513,339,498,354,508,298,494,230,530,150,554,149" shape="poly">
+
+                <area target="" alt="cerrado" title="Cerrado" id="3" href="#3-etnia" onclick="displayText(3)" coords="507,304,499,338,485,349,492,360,510,355,514,336,528,352,519,382,498,396,505,410,482,414,469,431,445,429,443,458,429,465,415,480,393,490,415,471,380,456,413,454,424,452,414,439,425,434,413,418,410,431,394,427,405,419,385,415,404,396,426,393,418,388,392,393,360,453,332,442,312,458,305,447,282,452,289,413,306,424,321,399,322,360,306,348,286,355,305,325,284,320,265,337,254,335,246,290,266,287,288,318,305,295,319,317,374,319,384,260,393,273,412,240,425,255,433,198,461,195,477,180,495,144,529,146,497,227,499,264" shape="poly">
+
+                <area target="" alt="mata atlantica" title="Mata Atlântica" id="4" href="#4-etnia" onclick="displayText(4)" coords="320,565,351,576,381,569,395,574,419,551,424,503,488,464,525,461,539,450,561,408,570,378,572,336,581,306,590,303,604,274,631,257,641,226,637,200,631,224,614,243,613,261,598,266,589,293,552,313,558,326,540,336,517,339,531,353,519,382,502,394,508,416,486,419,470,440,452,436,452,460,431,465,417,486,390,492,411,471,371,456,416,452,406,441,418,436,413,422,411,433,390,416,386,413,408,391,393,391,363,449,355,458,333,445,314,461,315,479,333,478,331,503,343,510,344,526,313,543,350,561" shape="poly">
+
+                <area target="" alt="pampa" title="Pampa" id="5" href="#5-etnia" onclick="displayText(5)" coords="320,566,347,558,314,545,280,574,310,590,349,614,347,635,361,620,369,604,383,600,399,574,379,572,351,574" shape="poly">
+                <area target="" alt="pantanal" title="Pantanal" id="6" href="#6-etnia" onclick="displayText(6)" coords="254,360,280,389,272,416,280,452,287,410,308,423,323,396,320,361,307,348,293,362,274,355" shape="poly">
+            </map>
+
+            <div class="legenda-mapa gloock">
+                <h2>Biomas</h2>
+                <div class="bundle-item">
+                    <div class="item">
+                        <div class="sqr amazonia"></div>
+                        <h3>Amazônia</h3>
+                    </div>
+                    <div class="item">
+                        <div class="sqr caatinga"></div>
+                        <h3>Caatinga</h3>
+                    </div>
+                    <div class="item">
+                        <div class="sqr cerrado"></div>
+                        <h3>Cerrado</h3>
+                    </div>
+                    <div class="item">
+                        <div class="sqr mata-atlantica"></div>
+                        <h3>Mata Atlântica</h3>
+                    </div>
+                    <div class="item">
+                        <div class="sqr pampa"></div>
+                        <h3>Pampa</h3>
+                    </div>
+                    <div class="item">
+                        <div class="sqr pantanal"></div>
+                        <h3>Pantanal</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="etnia-bioma instrument-sans" id="bioma-etnia">
+            <div class="etnia" id="1-etnia">
+                <img class="etnia-img" id="amazonia-banner" src="src/biomas/amazonia.jpg">
+
+                <section class="etnia-title">    
+                <div class="sqr amazonia"></div><h2 class="gloock">Amazônia</h2>
+
+                </section>
+                
+                <section class="bioma-resumo amazonia-op">
+                    <p>A Amazônia é um dos biomas mais ricos em biodiversidade do mundo. As etnias que habitam historicamente o bioma desenvolveram sistemas agrícolas complexos, como a aglofloresta, que replica a dinâmica da floresta natural, garantindo a fertilidade do solo e a diversidade biológica.</p>
+                </section>
+                
+                <section class="etnia-text">
+                    <h2 class="gloock">Etnias da Amazônia</h2>
+                    <div class="etnia-card amazonia-op">
+                        <img class="etnia-card-img" src="src/etnias/yanomami.jpg.webp"/>
+                        <div class="etnia-data">
+                            <h3 class="etnia-name gloock">Yanomami</h3>
+                        <p>
+                            Os Yanomami são um povo indígena que habita a floresta tropical do Norte da Amazônia, abrangendo uma vasta área de aproximadamente 192.000 km², que se estende entre o Brasil e a Venezuela com uma população estimada em cerca de 35.000. Sua espiritualidade é profundamente enraizada na floresta, com xamãs desempenhando um papel central em suas vidas.
+                        </p>
+                        <p>
+                            A partir do anos 1970, os Yanomami passaram a enfrentar diversos desafios, como a invasão de seus territórios por garimpeiros e a introdução de doenças. Essas ameaças externas causaram sérios impactos em sua saúde e cultura. 
+                        </p>
+                        <p>
+                            Apesar disso, o povo Yanomami continua a lutar pela proteção de suas terras e pela preservação de seu modo de vida tradicional. A defesa de seus direitos territoriais é fundamental para garantir a sobrevivência desse povo e a proteção da maior floresta tropical do planeta.
+                        </p>
+                        </div>
+                    </div>
+
+                    <div class="etnia-card amazonia-op">
+                        <img class="etnia-card-img" src="src/etnias/tukano.jpg"/>
+                        <div class="etnia-data">
+                            <h3 class="etnia-name gloock">Tukano</h3>
+
+                        <p>
+                            Os Tukanos são um povo indígena da família lingüística Tukano Oriental. Autodenominam-se Ye’pâ-masa ou Daséa. É a etnia mais numerosa  Concentram-se principalmente nos rios Tiquié, Papuri e Uaupés, mas também estão morando no Rio Negro, a jusante da foz do Uaupés, inclusive na cidade de São Gabriel. 
+                        </p>
+                        <p>
+                            É possível que existam mais de 30 subdivisões entre os Tukano, cada qual com um nome e, idealmente, compondo um conjunto hierarquizado. Atualmente, com todas as dispersões ocorridas nos últimos séculos, as posições hierárquicas são razão de polêmicas e versões variadas. 
+                        </p>
+                        <p>
+                            Os Tukano são fabricantes tradicionais do banco ritual, feito de madeira (sorva) e pintado, na parte do assento, com motivos geométricos semelhantes àqueles dos trançados. É um objeto muito valorizado, obrigatório nas cerimônias e rituais, onde se sentam os líderes, kumua (benzedores) e bayá (chefes de cerimônia).
+                        </p>
+                        </div>
+                    </div>
+
+                    <div class="etnia-card amazonia-op">
+                        <img class="etnia-card-img" src="src/etnias/baniwa.jpg"/>
+                        <div class="etnia-data">
+                            <h3 class="etnia-name gloock">Baniwa</h3>
+
+                        <p>
+                            Os Baniwa são um povo indígena que habita a região da fronteira entre o Brasil, Colômbia e Venezuela, especialmente ao longo do Rio Içana e seus afluentes. Com uma população estimada em cerca de 15 mil indivíduos, dos quais aproximadamente 4.026 vivem no Brasil. A língua falada por esse povo pertence à família Aruak, e eles se autodenominam Walimanai, que significa "os outros novos que vão nascer".
+                        </p>
+                        <p>
+                            A cultura Baniwa é rica em artesanato, destacando-se pela confecção de cestas de arumã, uma prática tradicional que remonta a ensinamentos de heróis criadores. Além disso, os Baniwa têm se envolvido ativamente em movimentos indígenas na região, fortalecendo sua identidade e luta por direitos.
+                        </p>
+                        <p>
+                            Historicamente, os Baniwa enfrentaram desafios significativos desde o contato com colonizadores e missionários, que impactaram suas formas de vida e território. Apesar das adversidades, eles mantêm uma conexão forte com suas raízes culturais e continuam a lutar pela preservação de suas terras e tradições, adaptando-se às mudanças sociais e econômicas contemporâneas enquanto buscam fortalecer sua identidade coletiva.
+                        </p>
+                        </div>
+                    </div>
+
+                    <div class="etnia-card amazonia-op">
+                        <img class="etnia-card-img" src="src/etnias/munduruku.jpg"/>
+                        <div class="etnia-data">
+                            <h3 class="etnia-name gloock">Munduruku</h3>
+
+                        <p>
+                            Os Munduruku são um povo indígena que habita principalmente a região do Vale do Tapajós, nos estados do Pará e Amazonas, com uma população estimada em cerca de 17.997 indivíduos.
+                        </p>
+                        <p>
+                            Autodenominados Wuyjuyu, eles pertencem à família linguística Munduruku, do tronco Tupi. Historicamente conhecidos por sua tradição guerreira, os Munduruku dominavam culturalmente a área que chamavam de Mundurukânia. A língua Munduruku é falada por muitos, embora haja variações na fluência entre as gerações.
+                        </p>
+                        <p>
+                            Desde o contato com colonizadores no século XVIII, sua história tem sido marcada por resistência e luta pela preservação de suas terras e cultura, refletindo um profundo conhecimento e conexão com o meio ambiente ao seu redor. Hoje enfrentam desafios significativos devido à exploração ilegal de recursos naturais, como garimpos de ouro e projetos hidrelétricos que ameaçam seu território.
+                        </p>
+                        </div>
+                    </div>
+
+                    <div class="etnia-card amazonia-op">
+                        <img class="etnia-card-img" src="src/etnias/satere-mawe.jpg"/>
+                        <div class="etnia-data">
+                            <h3 class="etnia-name gloock">Sateré-Mawé</h3>
+
+                        <p>
+                            Os Sateré-Mawé são um povo indígena do Brasil, localizado principalmente na região do médio rio Amazonas, especialmente nas terras indígenas Andirá-Marau e Coatá-Laranjal. Com uma população de aproximadamente 13.350 indivíduos, eles se destacam pela domesticação do guaraná, uma planta que cultivam e processam, tornando-se referência mundial.
+                        </p>
+                        <p>
+                            A cultura Sateré-Mawé é rica em tradições agrícolas sustentáveis, refletindo um profundo conhecimento da flora local e práticas de manejo que garantem a preservação do meio ambiente. A língua Sateré-Mawé pertence ao tronco Tupi e é falada por muitos, embora haja um bilinguismo significativo com o português. 
+                        </p>
+                        <p>
+                            Historicamente, o contato com não indígenas começou no século XVII, levando a uma redução de seu território devido à colonização. Hoje, os Sateré-Mawé continuam a lutar pela preservação de suas terras e cultura, integrando-se também ao mercado de trabalho nas cidades próximas.
+                        </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="etnia" id="2-etnia">
+                <img class="etnia-img" id="caatinga-banner" src="src/biomas/caatinga.jpg">
+
+                <section class="etnia-title">    
+                <div class="sqr caatinga"></div><h2 class="gloock">Caatinga</h2>
+
+                </section>
+                
+                <section class="bioma-resumo caatinga-op">
+                    <p>Na Caatinga, um bioma semiárido, as comunidades indígenas enfrentam desafios relacionados à escassez de água. Desta forma, eles cultivam plantas adpatadas ao clima seco, como mandacaru e xique-xique, e criam animais como caprinos e ovinos para garantir sua subsistência.</p>
+                </section>
+
+                <section class="etnia-text">
+                    <h2 class="gloock">Etnias da Caatinga</h2>
+                    <div class="etnia-card caatinga-op">
+                        <img class="etnia-card-img" src=""/>
+                        <div class="etnia-data">
+                            <h3 class="etnia-name gloock">Tumbalalá</h3>
+
+                        <p>
+                            Os Tumbalalá são um povo indígena que habita a região do sertão de Pambú, no estado da Bahia, entre os municípios de Curaçá e Abaré, próximo ao rio São Francisco. Reconhecidos oficialmente pela Funai em 2001, após um processo de mobilização que começou em 1998, eles estão em busca de demarcação territorial e preservação de sua identidade cultural. A população é estimada em cerca de 302 indivíduos, que falam predominantemente o português, embora algumas palavras remanescentes de uma língua indígena antiga, o cariri, sejam utilizadas em rituais.
+</p>
+                        <p>
+A economia dos Tumbalalá baseia-se na agricultura adaptada ao clima semiárido da caatinga, utilizando técnicas de irrigação para cultivar mandioca, feijão e cebola. A criação de caprinos e bovinos também é comum, especialmente durante os períodos chuvosos, que favorecem a produção de pastagens naturais. Além disso, eles mantêm práticas culturais ligadas à jurema, uma planta central em seus rituais religiosos.
+</p>
+                        <p>
+Historicamente, os Tumbalalá emergiram de um contexto complexo de interações entre diferentes grupos indígenas e colonizadores desde o século XVII. Eles são parte de uma rede mais ampla de comunicação interétnica no Nordeste brasileiro e continuam a lutar pela valorização de sua cultura e direitos territoriais em face das pressões externas e das mudanças sociais.
+                        </p>
+                        </div>
+                    </div>
+
+                    <div class="etnia-card caatinga-op">
+                        <img class="etnia-card-img" src=""/>
+                        <div class="etnia-data">
+                            <h3 class="etnia-name gloock">Pankará</h3>
+
+                        <p>
+                            Os Pankará são um povo indígena que habita a Serra do Arapuá, no sertão de Pernambuco, e se autodenominam assim desde 2003, em um movimento de reafirmação de sua identidade étnica. Com uma população estimada em 302 indivíduos, eles vivem em núcleos populacionais que mesclam práticas tradicionais e influências contemporâneas, mantendo uma economia baseada na agricultura, criação de animais e atividades sazonais. A língua falada é predominantemente o português, mas eles utilizam expressões e metáforas que refletem sua cultura.
+</p>
+                        <p>
+Historicamente, os Pankará enfrentaram a expropriação de suas terras desde o período colonial, resultando em um processo contínuo de resistência e luta pela demarcação territorial. A Serra do Arapuá, com sua vegetação variada, é central para suas práticas culturais e econômicas, onde cultivam plantas adaptadas ao clima semiárido. Além disso, a comunidade tem se organizado para garantir educação e saúde adequadas, com escolas indígenas e equipes de saúde atuando na região.
+</p>
+                        <p>
+A trajetória dos Pankará é marcada por desafios significativos, incluindo a luta contra a marginalização e a busca por reconhecimento étnico. Apesar das adversidades, eles continuam a preservar suas tradições e fortalecer sua identidade cultural, buscando um futuro sustentável para as próximas gerações.
+                        </p>
+                        </div>
+                    </div>
+
+                    <div class="etnia-card caatinga-op">
+                        <img class="etnia-card-img" src=""/>
+                        <div class="etnia-data">
+                            <h3 class="etnia-name gloock">Kiriri</h3>
+
+                        <p>
+                            Os Kiriri são um povo indígena localizado na região do sertão da Bahia, especificamente na Terra Indígena Kiriri, que foi homologada em 1990. Com uma população estimada em 2.806 indivíduos, eles se autodenominam Kiriri, um termo de origem tupi que significa "povo calado". Historicamente, os Kiriri enfrentaram a expropriação de suas terras desde o período colonial, mas nos anos 90, conseguiram promover a retirada de não-índios de seu território por meio de mobilizações políticas. 
+</p>
+                        <p>
+A cultura dos Kiriri é marcada por práticas tradicionais e rituais que refletem sua identidade e conexão com a terra. A comunidade tem se organizado para fortalecer sua estrutura social e política, promovendo a educação intercultural e a preservação de suas tradições. O toré, um ritual importante, foi resgatado e se tornou central na vida comunitária.
+</p>
+                        <p>
+Apesar dos desafios enfrentados ao longo da história, como a marginalização e a luta por direitos territoriais, os Kiriri continuam a trabalhar pela valorização de sua cultura e pela proteção de suas terras, servindo como exemplo de resistência para outros povos indígenas na região Nordeste do Brasil.
+                        </p>
+                        </div>
+                    </div>
+
+                    <div class="etnia-card caatinga-op">
+                        <img class="etnia-card-img" src=""/>
+                        <div class="etnia-data">
+                            <h3 class="etnia-name gloock">Jenipapo-Kanindé</h3>
+
+                        <p>
+                            Os Jenipapo-Kanindé são um povo indígena localizado na Lagoa Encantada, no município de Aquirás, Ceará, descendentes dos Payaku, que habitavam a região litorânea do Nordeste brasileiro. Com uma população que cresceu de 96 indivíduos em 1982 para 302 em 2010, eles mantêm uma economia baseada na agricultura, pesca e coleta, cultivando principalmente mandioca, milho e frutas nativas. 
+                            </p>
+                        <p>
+                            A cultura Jenipapo-Kanindé é marcada por um forte vínculo com seu território sagrado e uma rica tradição artesanal, incluindo trançados de cipó e palha. Historicamente, enfrentaram violências e perda de terras desde o contato com os colonizadores no século XVII, mas continuam a lutar pela preservação de sua identidade cultural e direitos territoriais.
+                        </p>
+                        </div>
+                    </div>
+
+                    <div class="etnia-card caatinga-op">
+                        <img class="etnia-card-img" src=""/>
+                        <div class="etnia-data">
+                            <h3 class="etnia-name gloock">Kambiwá</h3>
+
+                        <p>
+                            Os Kambiwá são um povo indígena que reside principalmente nos municípios de Inajá, Ibimirim e Floresta, no estado de Pernambuco. Com uma história marcada pela resistência à expropriação de suas terras desde o século XVII, os Kambiwá buscam atualmente retornar à Serra Negra, uma área convertida em Reserva Biológica na década de 1970. A autodenominação "Kambiwá" significa "retorno à Serra Negra", refletindo seu objetivo de ampliar suas terras e recuperar seus espaços tradicionais.
+</p>
+                        <p>
+A língua falada pelos Kambiwá é o português, mas eles preservam algumas palavras de sua língua ancestral. A comunidade tem se esforçado para implementar um sistema educacional que respeite sua cultura e necessidades específicas, com a criação de escolas que promovem uma educação intercultural. Essas iniciativas incluem a formação de professores indígenas e a elaboração de material didático que reflita suas tradições.
+</p>
+                        <p>
+Historicamente, os Kambiwá enfrentaram desafios significativos devido ao avanço da pecuária e da colonização, que resultaram na redução de seu território e na perda de suas práticas culturais. Apesar dessas adversidades, eles continuam a lutar pela preservação de sua identidade cultural e pelos direitos sobre suas terras, buscando fortalecer sua comunidade e garantir um futuro sustentável para as próximas gerações.
+                        </p>
+                        </div>
+                    </div>
+                    
+                </section>
+            </div>
+
+            <div class="etnia" id="3-etnia">
+                <img class="etnia-img" id="cerrado-banner" src="src/biomas/cerrado.jpg">
+
+                <section class="etnia-title">    
+                <div class="sqr cerrado"></div><h2 class="gloock">Cerrado</h2>
+
+                </section>
+                
+                <section class="bioma-resumo cerrado-op">
+                    <p>No Cerrado, as etnias que habitam o bioma desenvolveram técnicas agrícolas adaptadas ao ambiente e sistemas de captação de água, essenciais durante a estação seca. A agricultura é praticada em áreas abertas intercaladas com matas nativas, permitindo a preservação da fauna local.</p>
+                </section>
+
+                <section class="etnia-text">
+                    <h2 class="gloock">Etnias do Cerrado</h2>
+                    <div class="etnia-card cerrado-op">
+                        <img class="etnia-card-img" src=""/>
+                        <div class="etnia-data">
+                            <h3 class="etnia-name gloock">Bororo</h3>
+
+                        <p>
+                            Os Bororo, autodenominados Boe, são um povo indígena que habita a região do Mato Grosso, Brasil, com uma população estimada em 1.817 indivíduos. Historicamente, eles ocupavam um vasto território que se estendia até a Bolívia e Goiás, mas atualmente enfrentam desafios significativos devido à perda de terras e à fragmentação de seu território tradicional. A disposição circular das aldeias Bororo reflete sua organização social complexa e o papel central do pátio da aldeia como espaço ritual e comunitário. A língua bororo é falada por quase toda a população e tem passado por um processo de revitalização após períodos de imposição do português nas escolas.
+</p>
+                        <p>
+Os Bororo têm uma rica vida cerimonial e cultural que se manifesta em suas práticas sociais e rituais. Desde o contato com os colonizadores no século XVII, eles enfrentaram uma série de desafios, incluindo a expropriação de terras e conflitos violentos. Apesar dessas adversidades, os Bororo têm se mobilizado para recuperar seus direitos territoriais e melhorar as condições de vida em suas comunidades, lutando pela demarcação de terras e pela inclusão em processos de avaliação ambiental que afetam suas áreas. A resistência cultural e política dos Bororo é um testemunho de sua resiliência diante das pressões externas e da busca contínua por autonomia.
+                        </p>
+                        </div>
+                    </div>
+
+                    <div class="etnia-card cerrado-op">
+                        <img class="etnia-card-img" src=""/>
+                        <div class="etnia-data">
+                            <h3 class="etnia-name gloock">Xavante</h3>
+
+                        <p>
+                            Os Xavante, autodenominados A'uwe, são um povo indígena que habita o leste do estado de Mato Grosso, Brasil, em uma região que abrange diversas Terras Indígenas, como Marechal Rondom e Maraiwatsede. Com uma população estimada em cerca de 22.256 indivíduos, os Xavante pertencem à família linguística Jê e possuem uma rica cultura caracterizada por práticas sociais e cerimoniais vibrantes. Historicamente, eles se tornaram conhecidos na década de 1940 devido à "Marcha para o Oeste", promovida pelo governo brasileiro, que buscou a "pacificação" dos Xavante, embora essa narrativa muitas vezes omita a resistência e a autonomia do povo.
+</p>
+                        <p>
+A organização social dos Xavante é complexa e inclui uma estrutura política autônoma, onde os grupos locais mantêm suas identidades culturais distintas enquanto compartilham uma língua comum e tradições cerimoniais. Apesar dos impactos significativos do contato com não indígenas, incluindo missionários e agentes do Serviço de Proteção aos Índios, a cultura Xavante se mantém viva e é transmitida de geração em geração. Atualmente, os Xavante enfrentam desafios relacionados à preservação de seu território e à proteção de seus modos de vida tradicionais em meio à crescente pressão da agropecuária e da exploração econômica na região.
+                        </p>
+                        </div>
+                    </div>
+
+                    <div class="etnia-card cerrado-op">
+                        <img class="etnia-card-img" src=""/>
+                        <div class="etnia-data">
+                            <h3 class="etnia-name gloock">Nambikwara</h3>
+
+                        <p>
+                            Os Nambikwara são um povo indígena que habita as regiões de transição entre o cerrado e a floresta amazônica, principalmente nas cabeceiras dos rios Juruena e Guaporé, nos estados de Mato Grosso e Rondônia. Com uma população estimada em 2.332 indivíduos, eles são conhecidos por sua mobilidade espacial e por uma cultura material simples, mas com uma cosmologia rica e complexa.
+                            </p>
+                        <p>
+                            O nome "Nambikwara", de origem tupi, significa "orelha furada", e foi adotado após o contato com a Comissão Rondon no início do século XX. Historicamente, os Nambikwara foram estudados por importantes antropólogos, como Claude Lévi-Strauss, e continuam a preservar sua identidade cultural enquanto se adaptam às mudanças sociais e ambientais ao seu redor.
+                        </p>
+                        </div>
+                    </div>
+
+                    <div class="etnia-card cerrado-op">
+                        <img class="etnia-card-img" src=""/>
+                        <div class="etnia-data">
+                            <h3 class="etnia-name gloock">Canela Apanyekrá</h3>
+
+                        <p>
+                            Os Canela Apanyekrá são um povo indígena que habita a região de cerrado e florestas-galeria no Maranhão, Brasil, e fazem parte do grupo maior dos Canela, que inclui os Ramkokamekrá. Com uma população estimada em cerca de 458 indivíduos, eles falam uma língua da família Jê e mantêm uma rica tradição cultural, caracterizada por práticas rituais complexas e uma organização social intrincada. </p>
+                        <p>
+                            Historicamente, os Apanyekrá enfrentaram desafios significativos desde o contato com colonizadores no século XVIII, incluindo a perda de terras e a influência de agências externas, como a Funai e missionários. Apesar dessas adversidades, eles continuam a lutar pela autonomia em suas atividades produtivas e pela preservação de sua identidade cultural.
+                        </p>
+                        </div>
+                    </div>
+
+                    <div class="etnia-card cerrado-op">
+                        <img class="etnia-card-img" src=""/>
+                        <div class="etnia-data">
+                            <h3 class="etnia-name gloock">Apinajé</h3>
+
+                        <p>
+                            Os Apinajé são um povo indígena que habita a região entre os rios Araguaia e Tocantins, no estado do Tocantins, Brasil. Com uma população estimada em 2.699 indivíduos, eles pertencem à família linguística Jê e são classificados como Timbira Ocidentais. Historicamente, os Apinajé enfrentaram uma significativa depopulação e desestruturação social a partir da segunda metade do século XX, quando suas terras foram invadidas por migrantes e cortadas por estradas, como a Belém-Brasília e a Transamazônica. Desde a demarcação de sua terra em 1985, o povo tem buscado recuperar seu território tradicional e preservar sua cultura.
+</p>
+                        <p>
+A organização social dos Apinajé é complexa, caracterizada por sistemas de metades cerimoniais e aldeias populosas. Apesar dos desafios enfrentados ao longo da história, incluindo conflitos com colonizadores e a luta por reconhecimento territorial, os Apinajé têm demonstrado resiliência e um crescimento populacional significativo nas últimas décadas. Suas práticas culturais e sociais refletem uma forte conexão com seu território, que é considerado central para sua identidade e modo de vida.
+
+                        </p>
+                        </div>
+                    </div>
+                    
+                </section>
+            </div>
+
+            <div class="etnia" id="4-etnia">
+                <img class="etnia-img" id="mata-atlantica-banner" src="src/biomas/mata-atlantica.jpg">
+
+                <section class="etnia-title">    
+                <div class="sqr mata-atlantica"></div><h2 class="gloock">Mata Atlântica</h2>
+
+                </section>
+                
+                <section class="bioma-resumo mata-atlantica-op">
+                    <p>Na Mata-Atlântica, os grupos indígenas adaptaram suas práticas agrícolas às características da floresta, cultivando mandioca em roças que eram abandonadas periodicamente para permitir a regeneração da vegetação. A pesca e a coleta de frutos do mar complementam suas dietas e economias.</p>
+                </section>
+
+                <section class="etnia-text">
+                    <h2 class="gloock">Etnias da Mata Atlântica</h2>
+                    <div class="etnia-card mata-atlantica-op">
+                        <img class="etnia-card-img" src=""/>
+                        <div class="etnia-data">
+                            <h3 class="etnia-name gloock">Potiguara</h3>
+
+                        <p>
+                            Os Potiguara são um povo indígena localizado principalmente na região do litoral nordestino, abrangendo os estados da Paraíba, Ceará e Rio Grande do Norte. Com uma população estimada em 18.445 indivíduos, eles são parte da família linguística Tupi-Guarani e têm uma rica história de resistência e luta pela preservação de sua identidade étnica. A autodenominação "Potiguara" remete ao significado de "comedores de camarão", refletindo suas práticas tradicionais de subsistência que incluem a pesca, a agricultura e a coleta de frutos nativos. Os Potiguara mantêm vivas suas tradições por meio do reaprendizado da língua, do complexo ritual do Toré e da celebração de festas que reforçam sua cultura e vínculos comunitários.
+</p>
+                        <p>
+Historicamente, os Potiguara enfrentaram desafios significativos desde o contato com colonizadores europeus no século XVI, incluindo conflitos violentos e a perda de terras. Sua história é marcada por alianças estratégicas com franceses e holandeses durante as tentativas de colonização, que foram fundamentais para sua resistência contra os portugueses. Ao longo dos séculos, eles conseguiram manter sua identidade cultural apesar das pressões externas e continuam a lutar pela demarcação de suas terras e pela valorização de seus direitos enquanto povo indígena. A atualidade dos Potiguara é marcada por esforços para fortalecer sua autonomia e promover o turismo étnico como forma de valorização cultural e econômica.
+                        </p>
+                        </div>
+                    </div>
+                    
+                    <div class="etnia-card mata-atlantica-op">
+                        <img class="etnia-card-img" src=""/>
+                        <div class="etnia-data">
+                            <h3 class="etnia-name gloock">Guarani</h3>
+
+                        <p>
+                            Os Guarani são um povo indígena que se estende por diversas regiões do Brasil, Argentina, Paraguai e Bolívia, com uma população total estimada em cerca de 85.255 indivíduos no Brasil. Autodenominados "Avá", que significa "pessoa" em sua língua, os Guarani pertencem à família linguística Tupi-Guarani e são conhecidos por suas ricas tradições culturais e sociais. Eles se organizam em diferentes grupos, como os Guarani-Kaiowá e os Guarani-Ñandeva, que, apesar das semelhanças em aspectos fundamentais, têm variações em suas práticas linguísticas e religiosas, refletindo a diversidade interna do povo.
+</p>
+                        <p>
+Historicamente, os Guarani enfrentaram desafios significativos desde o contato com colonizadores europeus, que resultaram em deslocamentos forçados e perda de terras. A metáfora do rio que se divide ao encontrar uma pedra gigante ilustra a fragmentação de sua população ao longo do tempo. Apesar das adversidades, os Guarani mantêm uma forte conexão com suas tradições e buscam fortalecer sua identidade cultural e direitos territoriais. Atualmente, eles lutam pela preservação de suas terras e pela valorização de sua cultura, enfrentando as pressões da modernidade enquanto reafirmam sua presença e importância na sociedade contemporânea.
+                        </p>
+                        </div>
+                    </div>
+
+                    <div class="etnia-card mata-atlantica-op">
+                        <img class="etnia-card-img" src=""/>
+                        <div class="etnia-data">
+                            <h3 class="etnia-name gloock">Tupinambá de Olivença</h3>
+
+                        <p>
+                            Os Tupinambá de Olivença são um povo indígena que reside na região sul da Bahia, especificamente em áreas que se estendem da costa marítima da vila de Olivença até a Serra das Trempes e a Serra do Padeiro. Com uma população estimada em cerca de 4.500 indivíduos, eles pertencem à família linguística Tupi e têm uma rica história que remonta ao período colonial, quando foram reconhecidos como um dos grupos indígenas mais influentes do Brasil. O aldeamento fundado por missionários jesuítas em 1680 marca o início de sua permanência na região, onde mantêm suas tradições culturais e sociais, apesar das pressões externas e da marginalização histórica.
+</p>
+                        <p>
+A identidade Tupinambá é fortemente ligada à sua organização social e práticas culturais, que incluem a produção de alimentos tradicionais e a preservação de rituais. Embora muitos se considerem "caboclos" ou "índios civilizados", isso não implica um abandono de sua condição indígena. Após um longo processo de luta por reconhecimento, os Tupinambá de Olivença foram oficialmente reconhecidos pela Funai em 2001, e a demarcação de seu território foi iniciada em 2009. Atualmente, eles buscam revitalizar sua língua e cultura, enfrentando os desafios da modernidade enquanto preservam suas raízes históricas e sociais.
+                        </p>
+                        </div>
+                    </div>
+
+                    <div class="etnia-card mata-atlantica-op">
+                        <img class="etnia-card-img" src=""/>
+                        <div class="etnia-data">
+                            <h3 class="etnia-name gloock">Pataxó</h3>
+
+                        <p>
+                            Os Pataxó são um povo indígena que habita o extremo sul da Bahia e o norte de Minas Gerais, com uma população estimada em 12.865 indivíduos. Eles pertencem à família linguística Maxakali e têm uma rica história que remonta a quase 250 anos, com evidências de sua aldeia de Barra Velha desde 1767. Desde o contato com os não indígenas no século XVI, os Pataxó enfrentaram desafios significativos, incluindo a necessidade de esconder seus costumes e tradições. Atualmente, estão empenhados em revitalizar sua língua, o Patxohã, e resgatar rituais tradicionais como o Awê, que reforçam sua identidade cultural.
+</p>
+                        <p>
+A cultura Pataxó é marcada por um forte vínculo com a terra e suas tradições, refletindo uma rica herança que inclui práticas agrícolas e artesanais. Apesar das dificuldades históricas, como a perda de território e a marginalização social, os Pataxó têm se mobilizado para garantir seus direitos e promover a educação intercultural em suas comunidades. O trabalho de revitalização da língua e das práticas culturais é um esforço coletivo que envolve todas as gerações, buscando fortalecer a identidade indígena e assegurar um futuro sustentável para o povo Pataxó.
+                        </p>
+                        </div>
+                    </div>
+
+                    <div class="etnia-card mata-atlantica-op">
+                        <img class="etnia-card-img" src=""/>
+                        <div class="etnia-data">
+                            <h3 class="etnia-name gloock">Tupiniquim</h3>
+
+                        <p>
+                            Os Tupiniquim são um povo indígena que habita o norte do Espírito Santo, Brasil, em três Terras Indígenas localizadas no município de Aracruz. Com uma população estimada em 3.278 indivíduos, eles falam a língua Tupi litorânea, embora hoje a maioria utilize o português. Historicamente, os Tupiniquim ocupavam uma vasta área que se estendia desde a Bahia até o rio São Mateus, e sua presença remonta ao século XVI, quando estabeleceram aldeias sob a influência de missionários jesuítas. A vida comunitária dos Tupiniquim é caracterizada por uma forte conexão com a terra e práticas culturais que incluem agricultura, pesca e rituais religiosos.
+</p>
+                        <p>
+Apesar dos desafios enfrentados ao longo da história, incluindo a perda de terras e a marginalização social, os Tupiniquim têm se mobilizado para garantir seus direitos territoriais e revitalizar sua cultura. A organização social do povo é baseada em laços familiares e comunitários, com práticas que promovem a cooperação econômica e a troca de conhecimentos. Atualmente, os Tupiniquim buscam fortalecer sua identidade cultural e garantir um futuro sustentável para as próximas gerações, enfrentando as pressões da modernidade enquanto preservam suas tradições e modos de vida.
+                        </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="etnia" id="5-etnia">
+                <img class="etnia-img" id="pampa-banner" src="src/biomas/pampa.jpg">
+
+                <section class="etnia-title">    
+                <div class="sqr pampa"></div><h2 class="gloock">Pampa</h2>
+
+                </section>
+                
+                <section class="bioma-resumo pampa-op">
+                    <p>No pampa estão registradas somente 4 etnias pela FUNAI</p>
+                </section>
+
+                <section class="etnia-text">
+                    <h2 class="gloock">Etnias do Pampa</h2>
+                    <div class="etnia-card pampa-op">
+                        <img class="etnia-card-img" src=""/>
+                        <div class="etnia-data">
+                            <h3 class="etnia-name gloock">Kaingang</h3>
+
+                        <p>
+                            Os Kaingang são um povo indígena que habita principalmente o sul do Brasil, em áreas que abrangem os estados de Paraná, Santa Catarina, Rio Grande do Sul e São Paulo, com uma população estimada em cerca de 51.000 indivíduos. Eles pertencem à família linguística Jê e têm uma rica história que remonta ao contato com colonizadores europeus no final do século XVIII. Desde então, os Kaingang passaram por um processo complexo de interação com a sociedade não indígena, que incluiu alianças e conflitos. Atualmente, eles vivem em mais de 30 Terras Indígenas, embora essas áreas representem apenas uma fração de seus territórios tradicionais.
+</p>
+                        <p>
+A cultura Kaingang é caracterizada por uma organização social hierárquica e uma forte conexão com suas práticas tradicionais. A língua Kaingang é um elemento central de sua identidade, e esforços têm sido feitos para revitalizá-la em meio à crescente influência do português. Os Kaingang também se dedicam à preservação de suas tradições culturais e sociais, enfrentando desafios relacionados à expropriação de terras e à marginalização. Apesar das dificuldades históricas, eles continuam a lutar pela valorização de sua identidade e direitos territoriais, buscando garantir um futuro sustentável para suas comunidades.
+                        </p>
+                        </div>
+                    </div>
+
+                    <div class="etnia-card pampa-op">
+                        <img class="etnia-card-img" src=""/>
+                        <div class="etnia-data">
+                            <h3 class="etnia-name gloock">Mbya</h3>
+
+                        <p>
+                          Os Guarani Mbya, também conhecidos como Mbya, são um povo indígena que com comunidades localizadas em estados como Paraná, Santa Catarina, Rio Grande do Sul, São Paulo e Rio de Janeiro. Com uma população estimada em cerca de 7.000 indivíduos no Brasil e 21.422 no Paraguai, os Mbya pertencem à família linguística Tupi-Guarani. Eles se reconhecem como parte de uma única família originária, mantendo uma forte identidade cultural e religiosa, apesar da dispersão geográfica e das pressões externas que enfrentam ao longo dos séculos.
+                          </p>
+                        <p>
+Historicamente, os Mbya têm raízes profundas que remontam ao período colonial, quando os Guarani formavam grandes conjuntos territoriais. Ao longo do tempo, eles enfrentaram desafios significativos, incluindo a colonização e a imposição de missões jesuítas. Atualmente, os Mbya lutam pela preservação de suas tradições e direitos territoriais, buscando revitalizar sua língua e práticas culturais. Suas aldeias são organizadas em torno de valores comunitários e espirituais que refletem uma conexão intrínseca com a natureza e suas práticas sustentáveis de subsistência.
+                        </p>
+                        </div>
+                    </div>
+
+                    <div class="etnia-card pampa-op">
+                        <img class="etnia-card-img" src=""/>
+                        <div class="etnia-data">
+                            <h3 class="etnia-name gloock">Charrua</h3>
+
+                        <p>
+                          Não foram encontradas informações sobre o povo.
+                        </p>
+                        </div>
+                    </div>
+
+                    <div class="etnia-card pampa-op">
+                        <img class="etnia-card-img" src=""/>
+                        <div class="etnia-data">
+                            <h3 class="etnia-name gloock">Ñandeva</h3>
+
+                        <p>
+                          Os Guarani Ñandeva, também conhecidos como Guarani-Nhandewa, são um povo indígena que habita principalmente o estado de Mato Grosso do Sul, Brasil, partes do Paraguai e da Argentina e o interior do sul do Brasil. Com uma população estimada em cerca de 13.000 indivíduos no Brasil, eles pertencem à família linguística Tupi-Guarani. A identidade Ñandeva é marcada por três aspectos fundamentais: o ava ñe'ë (a linguagem), que define a comunicação e a identidade; o tamõi (os ancestrais míticos), que reforçam a conexão com suas raízes; e o *ava reko* (o modo de vida), que orienta seu comportamento social e cultural. Esses elementos são essenciais para entender como os Guarani interpretam o mundo ao seu redor e interagem com a sociedade.
+</p>
+                        <p>
+Historicamente, os Guarani Ñandeva enfrentaram desafios significativos desde o contato com colonizadores europeus, que resultaram em deslocamentos forçados e a imposição de missões jesuítas. A presença missionária no século XVII levou à "redução" dos Guarani em aldeias controladas pelos jesuítas, onde suas práticas culturais foram impactadas. Apesar das adversidades, os Guarani Ñandeva continuam a lutar pela preservação de sua cultura, língua e direitos territoriais, buscando revitalizar suas tradições e fortalecer sua identidade indígena em um contexto contemporâneo marcado por pressões externas e busca por reconhecimento.
+                        </p>
+                        </div>
+                    </div>
+                    
+                </section>
+            </div>
+
+            <div class="etnia" id="6-etnia">
+                <img class="etnia-img" id="pantanal.jpg" src="src/biomas/pantanal.jpg">
+
+                <section class="etnia-title">    
+                <div class="sqr pantanal"></div><h2 class="gloock">Pantanal</h2>
+
+                </section>
+                
+                <section class="bioma-resumo pantanal-op">
+                    <p>No Pantanal os grupos indígenas se adaptaram aos períodos de cheia e seca característicos do bioma, se locomovendo pelas áreas alagadas cxom canoas e praticando agricultura em regiões elevadas, assim como praticando a pesca de forma extensiva. </p>
+                </section>
+
+                <section class="etnia-text">
+                    <h2 class="gloock">Etnias do Pantanal</h2>
+                    <div class="etnia-card pantanal-op">
+                        <img class="etnia-card-img" src=""/>
+                        <div class="etnia-data">
+                            <h3 class="etnia-name gloock">Guató</h3>
+
+                        <p>
+                            Os Guató são um povo indígena que habita a região do Pantanal, abrangendo áreas do Mato Grosso e Mato Grosso do Sul, além de partes da Bolívia. Com uma população estimada em 419 indivíduos, eles se autodenominam "Guató" e falam uma língua que pertence ao tronco Macro-Jê. Historicamente, os Guató ocupavam uma vasta área pantaneira, onde sua presença foi registrada desde o século XVI por viajantes e cronistas. No entanto, a partir da década de 1940, enfrentaram a expulsão de seus territórios tradicionais devido à invasão de fazendeiros e à exploração de recursos, levando muitos a migrar para as periferias urbanas.
+</p>
+                        <p>
+Apesar das dificuldades e da marginalização que sofreram ao longo das décadas, os Guató têm se mobilizado para recuperar sua identidade étnica e revitalizar sua cultura. Atualmente, existem esforços para preservar a língua Guató, que está praticamente extinta, com apenas alguns falantes remanescentes. A luta pela demarcação de suas terras e pelo reconhecimento de seus direitos continua sendo uma prioridade para o povo Guató, que busca garantir um futuro sustentável e preservar suas tradições em meio às pressões da sociedade contemporânea.
+                        </p>
+                        </div>
+                    </div>
+                    <div class="etnia-card pantanal-op">
+                        <img class="etnia-card-img" src=""/>
+                        <div class="etnia-data">
+                            <h3 class="etnia-name gloock">Terena</h3>
+
+                        <p>
+                            Os Terena são um povo indígena que habita principalmente o estado de Mato Grosso do Sul, Brasil, com uma população estimada em cerca de 26.065 indivíduos. Eles pertencem à família linguística Aruak e sua presença é notável em várias cidades da região, onde mantêm uma intensa interação com a sociedade não indígena. Historicamente, os Terena são remanescentes da nação Guaná e têm uma rica tradição cultural que combina elementos de suas origens com adaptações às mudanças sociais e ecológicas ao longo do tempo. Suas terras são fragmentadas em pequenas áreas, cercadas por fazendas, o que representa um desafio constante para a preservação de sua identidade e modos de vida.
+                        </p>
+                        <p>
+Os Terena têm se destacado pela sua capacidade de resistir às pressões externas e pela luta pela demarcação de suas terras. A língua terena é falada por muitos, embora seu uso varie entre as comunidades, refletindo uma realidade bilíngue onde o português também é amplamente utilizado. A cultura Terena é marcada por práticas agrícolas que se integram ao sistema econômico regional, permitindo que eles mantenham sua identidade enquanto participam ativamente da vida econômica local. Essa dualidade é um testemunho da resiliência do povo Terena, que continua a buscar formas de fortalecer suas tradições enquanto se adapta às dinâmicas contemporâneas.
+                        </p>
+                        </div>
+                    </div>
+                    
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer class="instrument-sans">
+        <section class="footer-section-1">
+            <div class="footer-lists">
+                <ul class="ft-list footer-links-1">
+                    <li><a href="https://www.gov.br/funai/pt-br" target="_blank">Funai</a></li>
+                    <li><a href="https://www.gov.br/povosindigenas/pt-br" target="_blank">Ministério dos Povos
+                            Indígenas</a></li>
+                    <li><a href="https://cimi.org.br/" target="_blank">Conselho Indigenista Missionário</a></li>
+                </ul>
+
+                <ul class="ft-list footer-links-2">
+                    <li><a href="https://semanact.mcti.gov.br/" target="_blank">Semana Nacional de Ciência e
+                            Tecnologia</a></li>
+                    <li><a href="https://alegre.ifes.edu.br/" target="_blank">Ifes Campus de Alegre</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <img src="src/logo.png" alt="logo-footer" id="logo-footer">
+            </div>
+        </section>
+
+        <section class="footer-section-2">
+            <hr>
+
+            <div>
+                <p>Site por: 3ºTII</p>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>
