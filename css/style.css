@@ -1,0 +1,631 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
+@font-face {
+    font-family: 'Gloock';
+    src: url('Gloock-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.instrument-sans {
+    font-family: "Instrument Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+}
+
+
+.gloock {
+    font-family: "Gloock", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*...*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    justify-content: center;
+	background-color: #efefef;
+	padding: 0.5rem 0rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+	align-content: center;
+	font-size: 140%;
+    font-weight: 500;
+}
+
+nav ul li {
+	text-align: center;
+    padding: 0.5rem;
+    width: 15%;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: #001d00;
+	transition: color 1s cubic-bezier(0.18, 0.03, 0.24, 0.99);
+}
+
+nav ul li a:hover {
+	color: #953b2a;
+}
+
+nav ul li img {
+    width: 6rem;
+    height: auto;
+    object-fit: cover;
+}
+
+/*..................*/
+
+.main-content-map, .main-map, .legenda-mapa, .item, .etnia-title{
+    display: flex;
+}
+
+.main-content-map, .legenda-mapa, .etnia{    
+    flex-direction: column;
+}
+
+.main-content-map, .main-map, .item {
+    align-items: center;
+}
+
+.main-content-map {
+    justify-content: center;
+    padding: 1rem;
+}
+
+.main-map {
+    margin: 2rem 0rem;
+    width: 70%;
+    justify-content: space-evenly;   
+}
+
+.legenda-mapa {
+    justify-content: space-evenly;
+}
+
+.legenda-mapa h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.item {
+    justify-content: flex-start;
+}
+
+.item h3 {
+    font-size: 1.5rem;
+}
+
+.sqr {
+    min-width: 1rem;
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius: 5px 0px 5px 0px;
+    margin-right: 1rem;
+}
+
+.amazonia {
+    background-color: #476e2a;
+}
+
+.caatinga {
+    background-color: #ffeeba;
+}
+
+.cerrado {
+    background-color: #953b2a;
+}
+
+.mata-atlantica {
+    background-color: #EFC93E;
+}
+
+.pampa {
+    background-color: #EF893E;
+}
+
+.pantanal {
+    background-color: #76C188;
+}
+
+
+.etnia-bioma {
+    display: none;
+    max-height: 0rem;
+    padding: 2rem 10rem;
+    transition: all 0.75s 1s ease-out;
+    animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s both;
+}
+
+.etnia {
+    display: none;
+    margin-top: 3rem;
+} 
+
+.etnia-img {
+    max-width: 100%;
+    height: 10rem;
+    object-fit: cover;
+    border-top-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    margin-bottom: 1rem;
+}
+
+#amazonia-banner {
+    object-position: 50% 70%;
+}
+
+#caatinga-banner {
+    object-position: 50% 45%;
+}
+
+#cerrado-banner {
+    object-position: 50% 55%;
+}
+
+#mata-atlantica-banner {
+    object-position: 50% 40%;
+}
+
+#pampa-banner {
+    object-position: 50% 40%;
+}
+
+#pantanal-banner {
+    object-position: 50% 70%;
+}
+
+.amazonia-op {
+    background-color: #476e2a3b;
+}
+
+.caatinga-op {
+    background-color: #ffeeba3b;
+}
+
+.cerrado-op {
+    background-color: #953b2a3b;
+}
+
+.mata-atlantica-op {
+    background-color: #EFC93E3b;
+}
+
+.pampa-op {
+    background-color: #EF893E3b;
+}
+
+.pantanal-op {
+    background-color: #76C1883b;
+}
+
+.etnia-title {
+    margin-top: 0.2rem;
+    font-size: 3rem;
+    justify-content: flex-start;
+    animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s both;
+
+}
+
+.bioma-resumo {
+    display: flex;
+    padding: 1rem;
+    text-align: justify;
+    font-size: 1.1rem;
+    margin: 1rem 0rem 3rem;
+    animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s both;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.etnia-text {
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s both;
+}
+
+.etnia-text h2 {
+    font-size: 2.1rem;
+    font-weight: 600;
+}
+
+.etnia-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    border-top-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    margin-top: 1rem;
+}
+
+.etnia-card-img {
+    object-fit: cover;
+    max-width: 30%;
+    max-height: 100%;
+    aspect-ratio: 1/1;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.etnia-name {
+    font-size: 4.5rem;
+    text-align: left;
+}
+
+.etnia-data {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 65%;
+    min-width: 65%;
+    max-height: 95%;
+}
+
+.etnia-data p {
+    margin-top: 5px;
+}
+
+
+/*..................*/
+
+.slide-out-top {
+    animation: slide-out-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@keyframes slide-out-top {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-1rem);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-1rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-top {
+  0% {
+    max-height: 0;
+    transform: translateY(-1rem);
+    opacity: 0;
+  }
+  100% {
+    max-height: 100%;
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+/*..................*/
+
+footer {
+    background-color: #953B2A;
+    color: #fffffa;
+    padding: 5rem 5rem 3rem 5rem;
+    width: 100%;
+    min-height: 10.9rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fffffa;
+    font-size: 1.2rem;
+    font-size: clamp(0.8rem, 0.6545rem + 0.4545vw, 1.2rem);
+    padding: .5rem;
+
+    border: 0.125rem solid #953B2A;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    transition: border .2s ease-out;
+}
+
+footer a:hover {
+    border: 0.125rem solid #fffffa;
+}
+
+.footer-section-1,
+.ft-list,
+.footer-lists {
+    display: flex;
+}
+
+.footer-section-1 {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ft-list {
+    flex-direction: column;
+    list-style: none;
+    gap: 2rem;
+}
+
+.footer-lists {
+    gap: 5rem;
+}
+
+#logo-footer {
+    width: auto;
+    height: 5rem;
+    filter: invert(1);
+}
+
+.footer-section-2 hr {
+    margin: 2rem 0;
+    height: .2rem;
+    background-color: #fffffa;
+    border: none;
+}
+
+.footer-section-2 div {
+    text-align: center;
+}
+
+/*..........................................*/
+
+@media (max-width: 767px) {
+
+nav {
+    width: fit-content;
+}
+
+nav ul {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 90%;
+    height: 15vh;
+    background-color: #f0f0f0;
+    z-index: 2;
+    padding: 0;
+}
+
+nav ul li:nth-child(3) {
+    display: flex;
+    justify-content: center;
+    transform: translateY(0);
+    transition: all 0.3s ease-in-out, transform 0.3s ease-in-out;
+    animation: slide-in-top 0.3s ease-in-out both;
+}
+
+nav ul li:not(:nth-child(3)) {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+}
+
+nav ul.show-menu li:not(:nth-child(3)) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+nav ul.show-menu li:nth-child(3){
+    display: none;
+    transform: translateY(-20px);
+    transition: all 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+nav ul li img {
+    width: 6rem;
+    height: auto;
+    object-fit: cover;
+}
+
+/*....................*/
+
+.main-content-map{
+    overflow: hidden;
+    display: flex;
+    width: fit-content;
+    padding: 3rem 1rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+} 
+ 
+.main-map {
+    display: flex;
+    margin: 3rem 0rem;
+    width: fit-content;  
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-map img {
+    width: 90%;
+    height: auto;
+}
+
+.legenda-mapa {    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.legenda-mapa h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.bundle-item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.item h3 {
+    font-size: 1.8rem;
+}
+
+.sqr {
+    min-width: 1rem;
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius: 5px 0px 5px 0px;
+    margin-right: 1rem;
+}
+
+.etnia-bioma {
+    padding: 0rem 1rem 2rem;
+}
+
+.etnia {
+    width: fit-content;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+} 
+
+.etnia-img {
+    display: none;
+}
+
+.etnia-title {
+    margin-top: 0px;
+    font-size: 2rem;
+}
+
+.etnia-text {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.bioma-resumo {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.etnia-text h2 {
+    font-size: 1.5rem;
+}
+
+.etnia-card {
+    width: fit-content;
+    flex-direction: column;
+    padding: 0rem;
+}
+
+.etnia-card-img {
+    margin-top: 2rem;
+    max-width: 80%;
+    min-width: 80%;
+    max-height: 100%;
+    aspect-ratio: 1/1;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.etnia-name {
+    font-size: 1.8rem;
+    text-align: left;
+    margin: 0.5rem 0rem 1rem;
+}
+
+.etnia-data {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 80%;
+    max-height: 80%;
+    margin-bottom: 2rem;
+}
+
+.etnia-data p {
+    margin-top: 5px;
+}
+
+
+/*....................*/
+footer{
+        padding-top: 2rem;
+    }
+
+    footer,
+    .ft-list {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .footer-section-1,
+    .footer-lists {
+        flex-direction: column;
+        align-items: left;
+    }
+
+    .ft-list{
+        gap: 1rem;
+    }
+
+    .footer-section-1 {
+        gap: 3rem;
+    }
+
+    footer a {
+        padding: 0;
+        border: none;
+    }
+
+    footer a:hover {
+        border: none;
+    }
+}
