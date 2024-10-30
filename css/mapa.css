@@ -96,6 +96,7 @@ footer a {
     font-size: 1.2rem;
     font-size: clamp(0.8rem, 0.6545rem + 0.4545vw, 1.2rem);
     padding: .5rem;
+
     border: 0.125rem solid #953B2A;
     border-top-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
@@ -142,6 +143,49 @@ footer a:hover {
 
 .footer-section-2 div {
     text-align: center;
+}
+
+@media (max-width: 1008px){
+    footer{
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 895px) {
+
+    /* FOOTER */
+    footer {
+        padding-top: 2rem;
+    }
+
+    footer,
+    .ft-list {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .footer-section-1,
+    .footer-lists {
+        flex-direction: column;
+        align-items: left;
+    }
+
+    .ft-list {
+        gap: 1rem;
+    }
+
+    .footer-section-1 {
+        gap: 3rem;
+    }
+
+    footer a {
+        padding: 0;
+        border: none;
+    }
+
+    footer a:hover {
+        border: none;
+    }
 }
 
 /*..................*/
@@ -400,6 +444,12 @@ footer a:hover {
 
 /*..........................................*/
 
+@media (max-width: 950px){
+    .main-map{
+        flex-direction: column;
+    }
+}
+
 @media (max-width: 767px) {
 
 /* HEADER */
@@ -454,40 +504,6 @@ footer a:hover {
         height: auto;
         object-fit: cover;
     }
-
-    footer{
-        padding-top: 2rem;
-    }
-
-    footer,
-    .ft-list {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .footer-section-1,
-    .footer-lists {
-        flex-direction: column;
-        align-items: left;
-    }
-
-    .ft-list{
-        gap: 1rem;
-    }
-
-    .footer-section-1 {
-        gap: 3rem;
-    }
-
-    footer a {
-        padding: 0;
-        border: none;
-    }
-
-    footer a:hover {
-        border: none;
-    }
-
 /*....................*/
 
 .main-content-map{
