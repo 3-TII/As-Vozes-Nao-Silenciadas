@@ -173,12 +173,10 @@ if (window.outerWidth < 768) {
   let terceiroItem = items[2];
 
   terceiroItem.addEventListener('click', function(event) {
-    event.preventDefault();
+  event.preventDefault();
 });
+  terceiroItem.setAttribute('disabled', 'true');
 
-link.setAttribute('disabled', 'true');
-
-  terceiroItem.href = "";
   const navHeight = document.querySelector('ul').offsetHeight;
   const main = document.querySelector('main');
 

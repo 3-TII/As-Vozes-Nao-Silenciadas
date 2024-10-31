@@ -489,7 +489,7 @@ ul {
   }
   
   .titulos {
-    min-width: 36rem;
+    max-width: 90%;
 
   }
 
